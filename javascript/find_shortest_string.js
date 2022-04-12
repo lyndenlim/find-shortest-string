@@ -1,6 +1,18 @@
 function findShortestString(arr) {
-  // type your code here
+  // find the shortest string in an array
+  // find the minimum length of the entire array
+  // return the first string that is the minimum
+  let lengthOfStrings = []
+  for (let i of arr) {
+    lengthOfStrings.push(i.length)
+  }
+  for (let i of arr) {
+    if (Math.min(...lengthOfStrings) === i.length) {
+      return i
+    }
+  }
 }
+
 
 if (require.main === module) {
   // add your own tests in here
